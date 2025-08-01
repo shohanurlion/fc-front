@@ -121,3 +121,29 @@
     @apply bg-background text-foreground;
   }
 }
+@keyframes heartbeat {
+  0%, 100% {
+    width: 100%;
+  }
+  50% {
+    width: 60%;
+  }
+}
+
+/* Custom utility class using Tailwind-compatible class */
+.heartbeat-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #A6A6A6;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.heartbeat-underline:hover::after {
+  width: 100%;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+

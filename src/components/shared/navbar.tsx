@@ -15,28 +15,25 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Logo" width={30} height={30} />
-            <span className="text-lg font-bold text-gray-800">
-              <span className="text-black">people</span>
-              <span className="text-gray-500">per</span>
-              <span className="text-black">hour</span>
-            </span>
+          <h1 className="text-2xl font-bold">
+            <Link href="/">Web Logo</Link>
+          </h1>
           </div>
 
           {/* Search Button (Desktop Only) */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <button className="flex items-center gap-1 px-4 py-2 border border-blue-400 text-blue-500 rounded-md hover:bg-blue-50 transition">
               <Search size={16} />
               <span className="text-sm font-semibold">SEARCH</span>
               <span className="ml-1">&#9662;</span>
             </button>
-          </div>
+          </div> */}
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-5 text-sm font-medium text-gray-700">
-            <Link href="#">HOW IT WORKS</Link>
-            <Link href="#">LOG IN</Link>
-            <Link href="#">SIGN UP</Link>
+            <Link href="#" className="relative no-underline heartbeat-underline">HOW IT WORKS</Link>
+            <Link href="#" className="relative no-underline heartbeat-underline">LOG IN</Link>
+            <Link href="#" className="relative no-underline heartbeat-underline">SIGN UP</Link>
             <Link href="#" className="text-orange-600 font-bold">FREELANCER?</Link>
           </nav>
 

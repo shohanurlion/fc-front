@@ -53,7 +53,7 @@ export default function SubNavbar() {
         <ul className="flex gap-6 py-3 text-sm font-medium text-gray-700">
           {subNavItems.map((item, idx) => (
             <li key={idx} className="relative group">
-              <button className="hover:text-blue-600 transition">
+              <button className="hover:text-blue-600 transition relative no-underline heartbeat-underline cursor-pointer ">
                 {item.label}
               </button>
 

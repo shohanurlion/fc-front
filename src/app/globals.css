@@ -2,6 +2,10 @@
 @import "tw-animate-css";
 
 
+body {
+  @apply bg-[#0A0A0A] text-white;
+  
+}
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -121,29 +125,61 @@
     @apply bg-background text-foreground;
   }
 }
-@keyframes heartbeat {
-  0%, 100% {
-    width: 100%;
-  }
-  50% {
-    width: 60%;
-  }
+/* styles/globals.css */
+
+.link-hover-line {
+  position: relative;
+  text-decoration: none;
+  transition: 0.4s;
 }
 
-/* Custom utility class using Tailwind-compatible class */
-.heartbeat-underline::after {
+.link-hover-line::before {
   content: "";
   position: absolute;
-  left: 0;
+  width: 0;
+  height: 4px;
   bottom: 0;
-  height: 2px;
+  left: 50%;
   background-color: #A6A6A6;
-  width: 0%;
-  transition: width 0.3s ease;
+  transition: all 0.4s;
 }
 
-.heartbeat-underline:hover::after {
+.link-hover-line:hover::before {
   width: 100%;
-  animation: heartbeat 1.5s ease-in-out infinite;
+  left: 0;
+}
+
+/* styles/border-hover.css */
+
+.border-animate::before,
+.border-animate::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0 solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.5s ease;
+}
+
+.border-animate::after {
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.border-animate::before {
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.border-animate:hover::before,
+.border-animate:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: #A6A6A6;
 }
 

@@ -12,18 +12,18 @@ import { CustomNextArrow, CustomPrevArrow } from './CustomArrow'
 const MostPopularCategories = () => {
   const categories = [
     { id: 1, name: 'Web Development', image: '/img/02.jpeg' },
-    { id: 2, name: 'Graphic Design', image: '/img/02.jpeg' },
-    { id: 3, name: 'Content Writing', image: '/img/02.jpeg' },
-    { id: 4, name: 'Digital Marketing', image: '/img/02.jpeg' },
-    { id: 5, name: 'SEO Services', image: '/img/02.jpeg' },
-    { id: 6, name: 'Video Editing', image: '/img/02.jpeg' },
-    { id: 7, name: 'Web Design', image: '/img/02.jpeg' },
-    { id: 8, name: 'Web Development', image: '/img/02.jpeg' },
-    { id: 9, name: 'Graphic Design', image: '/img/02.jpeg' },
-    { id: 10, name: 'Content Writing', image: '/img/02.jpeg' },
+    { id: 2, name: 'Graphic Design', image: '/img/03.jpg' },
+    { id: 3, name: 'Content Writing', image: '/img/pexels-photo-257736.jpeg' },
+    { id: 4, name: 'Digital Marketing', image: '/img/07.jpg' },
+    { id: 5, name: 'SEO Services', image: '/img/sec.jpg' },
+    { id: 6, name: 'Video Editing', image: '/img/08.jpg' },
+    { id: 7, name: 'Web Design', image: '/img/09.jpg' },
+    { id: 8, name: 'Web Development', image: '/img/pexels-photo-257736.jpeg' },
+    { id: 9, name: 'Graphic Design', image: '/img/07.jpg' },
+    { id: 10, name: 'Content Writing', image: '/img/03.jpg' },
     { id: 11, name: 'Digital Marketing', image: '/img/02.jpeg' },
     { id: 12, name: 'SEO Services', image: '/img/02.jpeg' },
-    { id: 13, name: 'Video Editing', image: '/img/02.jpeg' },
+    { id: 13, name: 'Video Editing', image: '/img/sec.jpg' },
   ]
 
   const settings = {
@@ -45,7 +45,7 @@ const MostPopularCategories = () => {
   return (
     <Container>
      <div className='my-16'>
-       <h1 className="text-4xl font-bold mb-6">Most Popular Categories</h1>
+       <h1 className="text-[48px] font-bold mb-6">Popular services</h1>
       <div className="relative">
         <Slider {...settings}>
           {categories.map((category) => (
